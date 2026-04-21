@@ -22,21 +22,27 @@ int main()
   {
   case 1:
     cout << "has seleccionada el lunes" << endl;
+    system("pause");
     break;
   case 2:
     cout << "has seleccionada el martes" << endl;
+    system("pause");
     break;
   case 3:
     cout << "has seleccionada el miércoles" << endl;
+    system("pause");
     break;
   case 4:
     cout << "has seleccionada el jueves" << endl;
+    system("pause");
     break;
   case 5:
     cout << "has seleccionada el viernes" << endl;
+    system("pause");
     break;
   case 6:
     cout << "has seleccionada el sábado" << endl;
+    system("pause");
     break;
   case 7:
     cout << "has seleccionada el domingo" << endl;

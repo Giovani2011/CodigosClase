@@ -94,7 +94,7 @@ class ActaEmpresa {
 public:
 
     void ProcesarDocumento() {
-        ifstream archivo("Acta.txt");
+        ifstream archivo("/Users/giovanimarcano/Desktop/Clase/Archivos/Acta.txt");
         if(!archivo.is_open()) {
             cout << "[!] Error: No se pudo abrir Acta.txt" << endl;
             return;
@@ -192,7 +192,7 @@ public:
     }
 
     void VerResumen() {
-        ifstream archivo("Acta.txt");
+        ifstream archivo("/Users/giovanimarcano/Desktop/Clase/Archivos/Acta.txt");
         if(!archivo.is_open()) {
             cout << "[!] Error: No se pudo abrir Acta.txt" << endl;
             return;
@@ -360,7 +360,8 @@ int main() {
     int opcion = 0;
 
     do {
-        cout << "\n===================================" << endl;
+        system("clear"); // Limpiar pantalla antes del menú
+        cout << "===================================" << endl;
         cout << "      SISTEMA DE ACCIONISTAS" << endl;
         cout << "===================================" << endl;
         cout << "1. Leer el documento (Generar Usuarios)" << endl;
@@ -372,20 +373,30 @@ int main() {
 
         switch(opcion) {
             case 1:
+                system("clear");
                 app.ProcesarDocumento();
+                cout << "\nPresione Enter para continuar...";
+                cin.ignore(); cin.get(); // Pausa para ver resultados
                 break;
             case 2:
+                system("clear");
                 app.IngresarSistema();
+                cout << "\nPresione Enter para continuar...";
+                cin.ignore(); cin.get(); // Pausa para ver resultados
                 break;
             case 3:
+                system("clear");
                 app.VerResumen();
+                cout << "\nPresione Enter para continuar...";
+                cin.ignore(); cin.get(); // Pausa para ver resultados
                 break;
             case 4:
                 cout << "Saliendo..." << endl;
                 break;
             default:
-                cout << "Opción inválida. Intente de nuevo." << endl;
+                cout << "Opción inválida. Presione Enter...";
+                cin.ignore(); cin.get();
         }
-    }while(opcion != 4);
+    } while(opcion != 4);
     return 0;
 }

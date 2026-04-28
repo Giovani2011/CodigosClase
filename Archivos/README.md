@@ -24,7 +24,20 @@ Para proteger la información sensible, el sistema implementa:
 - `output/`: Almacén de perfiles encriptados.
 - `Acta.txt`: Documento legal de entrada.
 
-## Compilación
+## Librerías Utilizadas
+
+El sistema ha sido desarrollado utilizando exclusivamente librerías estándar de C++, garantizando su portabilidad sin necesidad de instalar dependencias externas:
+
+- `<iostream>`: Utilizada para la entrada y salida de datos por consola (`cout`, `cin`).
+- `<fstream>`: Permite la gestión de archivos (lectura del `Acta.txt` y creación de perfiles en `output/`).
+- `<string>`: Fundamental para el manejo de cadenas de texto y procesamiento de datos.
+- `<map>`: Estructura de datos utilizada para organizar a los accionistas de forma eficiente.
+- `<iomanip>`: Usada para formatear la salida, especialmente para la conversión a hexadecimal.
+- `<sstream>`: Facilita la conversión de datos (como bytes a strings hexadecimales).
+- `<ctime>`: Utilizada para inicializar la semilla de números aleatorios (`srand`) basándose en el tiempo actual.
+- `<cstdlib>`: Permite el uso de funciones del sistema como `system("clear")` y la generación de números aleatorios con `rand()`.
+
+## Instrucciones de Compilación
 ```bash
 g++ LeerActaEmpresa.c++ -o LeerActaEmpresa
 ./LeerActaEmpresa

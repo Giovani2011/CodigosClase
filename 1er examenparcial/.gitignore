@@ -1,0 +1,15 @@
+# Archivos de configuración sensible
+.env
+
+# Carpeta de salida con perfiles generados (datos privados)
+output/
+
+# Binarios y ejecutables
+LeerActaEmpresa
+*.exe
+*.out
+*.o
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
